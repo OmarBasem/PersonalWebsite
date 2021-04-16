@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/networks.css">
+    <title>Master Mind</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Master Mind Game using RaspberryPi</h1>
+    <h2 class="subHeader">Hardware Specifications</h2>
+    <h3 class="subSubHeader">Electronic Components used:</h3>
+    <li>RaspberryPi 3</li>
+    <li>1 16X2 LCD</li>
+    <li>2 LED</li>
+    <li>1 Potentiometer</li>
+    <li>1 Button</li>
+    <li>1 Bread Board</li>
+    <li>3 Resistors</li>
+    <li>Wires</li>
+    <h3 class="subSubHeader">Circuit:</h3>
+    <img src="../images/circuit.png" alt="RaspberryPi electronic circuit using bread board"/>
+    <h2 class="subHeader" style="margin-top: 5vh">Debug Mode Sample</h2>
+    <p class="txt">The following figure shows a debug mode sample. The program starts by asking the user for the colors
+        count
+        and the sequence size that the user has to guess. Each color is represented by a number. The user chooses 3
+        colors and a sequence size of 3.
+        In debug mode the secret is printed which is "2 1 2". After every guess the program tells the user the number of
+        exact matches followed
+        by the number of approximate matches. On a RaspberryPi the input is through the single button and the user gets
+        the output as several
+        LED blinks. So an input of "2 1 2" would be represented by 2 button presses, then wait for a blink, then one
+        button press, then wait for blink,
+        then finally 2 button presses. Getting 2 exact matches and 1 approx. would be represented by 2 (green) blinks, then a
+        separator blink of another color(white), then another (green) blink.</p>
+    <img src="../images/mastermind.png" alt="RaspberryPi command line"/>
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+</div>
+
+</body>
+</html>

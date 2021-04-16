@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+p, h1, h2, h3, i {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+a  {
+    text-decoration: none;
+}
+
+
+div {
+    width: 50vw;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+div > p {
+    font-size: 1.2vw;
+}
+
+div > p:nth-child(1) {
+    color: #20948D;
+    font-size: 1.5vw;
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+
+.header {
+    font-size: 2.5vw;
+    color: #20948D;
+    font-weight: 500;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.subHeader {
+    font-size: 2vw;
+    color: gray;
+    font-weight: 100;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+h4 {
+    overflow: hidden;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    color: #20948D;
+}
+
+h4:before,
+h4:after {
+    background-color: #20948D;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+
+h4:before {
+    right: 0.5em;
+}
+
+h4:after {
+    left: 0.5em;
+}
+
+@media screen and (max-width: 1000px) {
+    div {
+        width: 90vw
+    }
+    .container {
+        width: 90vw;
+    }
+
+    div > p {
+        font-size: 4.2vw;
+    }
+
+    div > p:nth-child(1) {
+        font-size: 5.25vw;
+    }
+
+    .header {
+        font-size: 8.75vw;
+    }
+
+    .subHeader {
+        font-size: 7vw;
+    }
+
+}

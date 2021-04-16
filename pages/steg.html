@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/steg.css">
+    <title>Steganography</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Steganography</h1>
+    <h2 class="subHeader">My C program example input & output</h2>
+<div class="figContainer">
+    <figure>
+        <img src="../images/deer.png" alt="A deer"/>
+        <figcaption>Img A - Container Image</figcaption>
+    </figure>
+    <figure>
+        <img src="../images/snail.png" alt="A snail"/>
+        <figcaption>Img B - Image to be encoded</figcaption>
+    </figure>
+
+</div>
+
+<div class="figContainer">
+    <figure>
+     <img src="../images/encoded1.png" alt="A deer image having another image encoded into it by steganography using 2 most significant bits of the RGB values"/>
+        <figcaption>Img C - Output image after encoding Img B into Img A using 2 bits of the RGB values. Looks almost identical to the original image.</figcaption>
+    </figure>
+    <figure>
+        <img src="../images/decoded1.png" alt="A snail image output of steganography decoding using 2 most significant bits only"/>
+        <figcaption>Img D - Output image after decoding Img C. Some quality has been lost.</figcaption>
+    </figure>
+
+</div>
+
+<div class="figContainer">
+    <figure>
+      <img src="../images/encoded2.png" alt="A deer image having another image encoded into it by steganography using 7 most significant bits of the RGB values"/>
+        <figcaption>
+            Img E - Output image after encoding Img B into Img A using 7 bits of the RGB values. Alteration can be seen.
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="../images/decoded2.png" alt="A snail image output of steganography decoding using 7 most significant bits"/>
+        <figcaption>
+            Img F - Output image after decoding Img E. Looks almost identical to the original image.
+        </figcaption>
+    </figure>
+</div>
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+
+</div>
+
+
+</body>
+</html>

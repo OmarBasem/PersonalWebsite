@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Omar Basem's personal website | Professional Software Engineer — iOS, Android & Cloud">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet prefetch'
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <title>Omar Basem</title>
+</head>
+<body>
+
+<header>
+    <div class="heyContainer">
+        <i class="hey">Hey, I'm</i>
+        <h1 class="omar">Omar Basem</h1>
+        <hr class="nameLine"/>
+    </div>
+
+    <div class="arrows">
+        <div class="headerArrow arrow-first"></div>
+        <div class="headerArrow arrow-second"></div>
+    </div>
+
+</header>
+
+<div class="navContainer" id="navContainer">
+    <div><a href="#profile">Profile</a></div>
+    <div><a href="#highlights">Highlights</a></div>
+    <div><a href="#projects" id="projectsMenu">Technical Projects</a></div>
+    <div><a href="#skills">Skills</a></div>
+    <div id="away"><a href="#awayFromCS">Away from CS</a></div>
+    <div id="photo"><a href="#photography">Photography</a></div>
+    <div id="more"><a href="#awayFromCS">More</a></div>
+</div>
+
+
+<section class="oddSection profileSection" id="profile">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Profile</h2>
+            <p class="quote">“Aspire. Dedicate. Achieve.”</p>
+            <p class="quote by">- Me</p>
+            <hr class="hLine"/>
+        </div>
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h3 class="aboutTitle">A little about me</h3>
+
+            <p class="aboutText">I am aspiring to found the world's next gen social network — <a
+                    style="color: gray; text-decoration: none" href="https://www.stiiick.com"
+                    target="_blank">STiiiCK</a>. Mobile App
+                Development and Cloud Computing have been my passion for the last few years. I also enjoy building
+                algorithmic intensive Software and working with Cryptography. I love spending time on fixing little
+                details and optimizing Software systems. This is
+                my personal
+                website
+                where I show some of my work.</p>
+            <img class="tech wow fadeInUp" data-wow-duration="1.5s" src="images/tech.png" alt="Mobile app development"/>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="oddSection highlightsSection" id="highlights">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Highlights</h2>
+            <hr class="hLineDark"/>
+            <div class="project wow fadeInUp" data-wow-duration="2s">
+                <a href="https://www.stiiick.com" target="_blank"><img class="projectPicture"
+                                                                       src="images/STiiiCK_icon.png"
+                                                                       alt="STiiiCK icon, World's First End-to-End Encrypted Social Network"/></a>
+
+                <div class="titleContainer">
+                    <a href="https://www.stiiick.com" target="_blank" style="text-decoration: none"><h3
+                            class="projectTitle">
+                        STiiiCK</h3></a>
+                    <i class="date">April 2018 - current</i>
+                </div>
+                <p class="projectSlogan">World's First End-to-End Encrypted Social Network</p>
+                <i class="mobileDate">April 2018 - current</i>
+                <p class="projectDesc projectDescDark">I have always been fond of the idea of social networks since they
+                    started
+                    thriving in
+                    the mid 2000s, but the privacy violations has been a serious matter of concern for me and a lot of
+                    people. The
+                    non-existence of a really private social network was the motivation for me to start building
+                    STiiiCK.
+                    This mobile application is the
+                    biggest project that I have been working on for over 2 years. I got the idea of STiiiCK in summer of
+                    2017, then I started
+                    immediately researching & learning all the technologies & skills that I would need to make this idea
+                    a
+                    reality. The first line
+                    of code for STiiiCK was written on April 2018, and now STiiiCK source code has hundreds of thousands
+                    of
+                    lines of
+                    code in over 5
+                    different languages, mainly: JavaScript, Python, Java & Swift. STiiiCK will be using a custom
+                    end-to-end
+                    encryption protocol tailored for social networks - the Stick Protocol - which is based on the <a
+                            style="color: #7F7F90" href="https://signal.org/docs/"
+                            target="_blank">Signal Protocol</a>.
+                    80% of the project is complete and will be released late 2021
+                    for iOS and Android.</p>
+            </div>
+
+            <div class="project wow fadeInUp" data-wow-duration="1.5s">
+                <a href="https://github.com/STiiiCK/stick-protocol" target="_blank"><img
+                        class="projectPicture projectPicture2" src="images/enc.jpeg"
+                        alt="Stick Protocol"/></a>
+                <div class="titleContainer">
+                    <a href="pages/threads.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Stick
+                        Protocol</h3></a>
+                </div>
+
+                <p class="projectSlogan">An End-to-End Encryption Protocol Tailored for Social Network Platforms</p>
+                <i class="mobileDate">March 2020</i>
+                <p class="projectDesc projectDescDark projectDesc2">End-to-end encryption has become a de facto standard
+                    in messengers, especially after the outbreak of the highly secure messaging protocol – <a
+                            style="color: #7F7F90" href="https://signal.org/docs/"
+                            target="_blank">Signal</a>.
+                    However, this high adoption of secure end-to-end communications has been limited to messengers,
+                    and has not yet seen a noticeable trace in social network platforms. From March 2020 until April
+                    2021,
+                    I was working on developing the Stick protocol - an end-to-end encryption protocol specifically
+                    designed for
+                    social networks, and will be the protocol powering STiiiCK. The Stick protocol supports
+                    re-establishable
+                    "many-to-many" encryption sessions in an asynchronous and multi-device setting while preserving
+                    forward
+                    secrecy and introducing backward secrecy. The Stick protocol is <a style="color: #7F7F90"
+                                                                                       target="_blank"
+                                                                                       href="https://github.com/STiiiCK/stick-protocol">open-source
+                        available on Github</a>.
+                    A 📄 <a target="_blank" style="color: #7F7F90" href="PDFs/StickProtocolPaper.pdf">Scientific Paper</a> is
+                    available for those interested in the project’s technical and research motivations.</p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="projectsSection" id="projects">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Technical Projects</h2>
+            <p class="quote">“The future belongs to those who believe in the beauty of
+                their dreams.”</p>
+            <p class="quote by">- Eleanor Roosevelt</p>
+            <hr class="hLine"/>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="https://comfrtshop.com" target="_blank"><img class="projectPicture" src="images/eCommerce.jpeg"
+                                                        alt="eCommerce"/></a>
+
+            <div class="titleContainer">
+                <a href="https://comfrtshop.com" target="_blank" style="text-decoration: none"><h3 class="projectTitle">comfrtshop.com</h3></a>
+                <i class="date">March 2021</i>
+            </div>
+            <p class="projectSlogan">Developed a demo eCommerce website supporting PCI DSS 3.2</p>
+            <i class="mobileDate">March 2021</i>
+            <p class="projectDesc">I have developed a demo eCommerce for buying electronincs, named Comrtshop.com. Comrtshop
+                is a SPA (Single-Page Application) developed from scratch using Django, React & AWS. It supports secure
+                payment transactions using Paysafe (3DS2 API) which is PCI DSS level 3.2 compliant - the highest level
+                possible. Paysafe is integrated into ComfrtShop using a JavaScript SDK on the frontend in addition to
+                a Python SDK on the backend. You can test out the website using the following test credit card - Card Number: 4000-0000-0000-1000, Expiry: 11/22, CVV: 111</p>
+        </div>
+
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/encModes.html" target="_blank"><img class="projectPicture" src="images/encMode.jpeg"
+                                                        alt="Encryption Modes"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/encModes.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Encryption Modes Analysis</h3></a>
+                <i class="date">December 2020</i>
+            </div>
+            <p class="projectSlogan">Investigated the effect of modifying a single bit in a ciphertext on 4 encryption modes of operation</p>
+            <i class="mobileDate">December 2020</i>
+            <p class="projectDesc">During that work, I analyzed the properties of 4 symmetric encryption modes: ECB, CBC,
+                CFB and OFB. In order to do this, a text file was encrypted using AES-192, then a single bit of two bytes
+                from different blocks was flipped. The corrupted ciphertext file was then decrypted and investigated.
+                Here are the <a target="_blank" href="pages/encModes.html" style="color: gray">analysis results</a>.</p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="PDFs/ann.pdf" target="_blank"><img class="projectPicture" src="images/ann.jpeg"
+                                                        alt="Artificial Neural Network"/></a>
+
+            <div class="titleContainer">
+                <a href="PDFs/ann.pdf" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Optimizing ANNs Using PSO</h3></a>
+                <i class="date">November 2020</i>
+            </div>
+            <p class="projectSlogan">Implemented an ANN (Artificial Neural Network) from scratch and trained it using PSO (Particle Swarm Optimization) algorithm</p>
+            <i class="mobileDate">November 2020</i>
+            <p class="projectDesc">In that work, I have implemented an ANN and PSO from scratch in Python, and experimentally
+                investigated how PSO can be used to optimise an ANN in order to approximate various mathematical functions.
+                In addition, I investigate how hyperparameters effect the ability of PSO to optimise ANNs, such as: population size,
+                number of informants, number of neurons per layer and number of layers. I was able to approximate all the functions
+                addressed with an accuracy above 95%. Here are the <a href="PDFs/ann.pdf" target="_blank" style="color: gray">analysis results</a>. Source code available upon request.</p>
+        </div>
+
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/threads.html" target="_blank"><img class="projectPicture" src="images/threading.jpeg"
+                                                              alt="Computers multithreading"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/threads.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">
+                    Multithreading</h3></a>
+                <i class="date">April 2020</i>
+            </div>
+            <p class="projectSlogan">Designed, implemented & analyzed 4 different multithreading concepts in
+                Java</p>
+            <i class="mobileDate">March 2020</i>
+            <p class="projectDesc">I have coded a program that implements the following multithreading techniques in
+                Java:
+                Atomic, Symaphore, Extrinsic & Intrinsic. In addition, tests were carried out using the JUnit
+                framework to analyze and compare
+                the efficiency and responsiveness of each technique. <a style="color: gray" href="pages/threads.html"
+                                                                        target="_blank">
+                    Here are some of the results analysis</a>.</p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/tm.html" target="_blank"><img class="projectPicture" src="images/tm.gif"
+                                                         alt="A Turing machine"/></a>
+            <div class="titleContainer">
+                <a href="pages/tm.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Turing
+                    Machine
+                    Multiplier</h3></a>
+                <i class="date">March 2020</i>
+            </div>
+            <p class="projectSlogan">Built a TM Multiplier graph & implemented the graph in Python</p>
+            <i class="mobileDate">March 2020</i>
+            <p class="projectDesc">I have built a Turing Machine which can multiply any given two numbers
+                efficiently.
+                The graph has
+                only 11 states and 4 symbols, and it can handle all edge cases in multiplication. Also, I have
+                implemented the graph in Python.
+                <a style="color: gray" href="pages/tm.html" target="_blank">Here are some analysis of the Python
+                    program</a>.
+            </p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/tictactoe.html" target="_blank"><img class="projectPicture" src="images/tictactoe.jpeg"
+                                                                alt="Tic-Tac-Toe"/></a>
+            <div class="titleContainer">
+                <a href="pages/tictactoe.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">
+                    Tic-Tac-Toe</h3></a>
+                <i class="date">December 2019</i>
+            </div>
+            <p class="projectSlogan">Implemented Value Iteration & Policy Iteration that plan/learn to play 3x3
+                Tic-Tac-Toe game</p>
+            <i class="mobileDate">December 2019</i>
+            <p class="projectDesc">I have coded a tic-tac-toe game using Java that tries to compute an optimal MDP
+                policy using Value Iteration
+                and Policy Iteration. I tested my agent against different rule-based agents (aggressive, defensive &
+                random).
+                <a style="color: gray" href="pages/tictactoe.html" target="_blank">This table summarizes the results</a>.
+            </p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/networks.html" target="_blank"><img class="projectPicture" src="images/networks.jpeg"
+                                                               alt="Computer networks"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/networks.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">
+                    Computer
+                    Networks</h3></a>
+                <i class="date">November 2019</i>
+            </div>
+            <p class="projectSlogan">Implemented various network topologies using different networking protocols</p>
+            <i class="mobileDate">November 2019</i>
+            <p class="projectDesc">I used the GNS3 Software to build and simulate several network topologies using
+                virtual machines
+                in VirtualBox. I have implemented different networking protocols into the topologies, such as EIGRP,
+                OSPF, RIP & DHCP and made use
+                of several networking concepts like NAT and PAT. <a href="pages/networks.html" target="_blank"
+                                                                    style="color: gray">Here are some network
+                    packets analysis using Wireshark</a>.</p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/pddl.html" target="_blank"><img class="projectPicture" src="images/pddl.jpg"
+                                                           alt="Artificial Intelligence"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/pddl.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Space
+                    Arena</h3></a>
+                <i class="date">October 2019</i>
+            </div>
+            <p class="projectSlogan">A program that uses Knowledge Representation for Automated Planning.</p>
+            <i class="mobileDate">October 2019</i>
+            <p class="projectDesc">I have created a small spacecraft game by modeling the spacecraft exploration
+                domain in PDDL and defining the properties, objects, and actions that are needed to describe the
+                domain and a
+                series of different problem scenarios. <a href="pages/pddl.html" target="_blank" style="color: gray">Here
+                    is an example problem, and the output produced by the
+                    domain file</a>.</p>
+        </div>
+
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/mastermind.html" target="_blank"><img style="border: 1px solid lightgray;"
+                                                                 class="projectPicture"
+                                                                 src="images/rpi.png" alt="RaspberryPi"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/mastermind.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">
+                    Master
+                    Mind</h3></a>
+                <i class="date">March 2019</i>
+            </div>
+            <p class="projectSlogan">Code-breaking game using RaspberryPi</p>
+            <i class="mobileDate">March 2019</i>
+            <p class="projectDesc">Master Mind is a code-breaking board game for two players. I have created a
+                Software-Hardware version of the game using a RaspberryPi and external electronic components such as
+                LCD, buttons & LEDs, and
+                coded the software using C and ARM Assembly without the use of any external libraries. C is used for
+                the
+                game logic, and ARM Assembly
+                is used for GPIO interactions between the RaspberryPi and the hardware components. <a
+                        href="pages/mastermind.html" target="_blank" style="color: gray">Hardware specifications &
+                    electronic circuit
+                    can be found here, plus debug mode sample</a>.</p>
+        </div>
+
+        <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="pages/steg.html" target="_blank"><img class="projectPicture" src="images/steg.jpeg"
+                                                           alt="Steganography"/></a>
+
+            <div class="titleContainer">
+                <a href="pages/steg.html" target="_blank" style="text-decoration: none"><h3 class="projectTitle">
+                    Steganography</h3></a>
+                <i class="date">February 2019</i>
+            </div>
+            <p class="projectSlogan">A program to encode and decode a text message or an image in another image</p>
+            <i class="mobileDate">February 2019</i>
+            <p class="projectDesc">This is a simple steganography system built with C. This system
+                has a command-line interface that allows its users to hide/encode a
+                message or an image into another image, then reveal/decode the text or image from the encoded image.
+                It
+                also
+                allows the user to choose the Most-Significant-Bits count of the RGB values of an image to encode.
+                Encoding more bits will
+                alter the output encoded image more, but also will produce a better quality decoded image. Example
+                input
+                and output can be seen
+                <a style="color: gray" href="pages/steg.html" target="_blank">from here</a>.</p>
+        </div>
+        <div class="seeMoreContainer" id="seeMore"><p class="seeMore">See More</p></div>
+
+        <div class="moreProjects" id="moreProjects">
+            <div class="project" data-wow-duration="1.5s">
+                <a href="https://gatesandfences.herokuapp.com" target="_blank"><img class="projectPicture"
+                                                                                    src="images/redesign.jpg"
+                                                                                    alt="Website redesign"/></a>
+
+                <div class="titleContainer">
+                    <a href="https://gatesandfences.herokuapp.com" target="_blank" style="text-decoration: none"><h3
+                            class="projectTitle">Gates & Fences</h3></a>
+                    <i class="date">March 2018</i>
+                </div>
+
+                <p class="projectSlogan">A redesign of <a class="link" target="_blank"
+                                                          href="http://www.gatesnfences.com">gatesnfences.com</a>
+                    to <a class="link" target="_blank" href="https://gatesandfences.herokuapp.com">gatesandfences.herokuapp.com</a>
+                </p>
+                <i class="mobileDate">March 2018</i>
+                <p class="projectDesc">www.gatesnfences.com was featured on <a style="color: gray" target="_blank"
+                                                                               href="http://blog.marginmedia.com.au/our-blog/bad-website-of-the-month-november-15-gates-n-fences">Margin
+                    Media</a> as "bad website of the month" in November 2015. I attempted a redesign of the website with
+                    a
+                    much better looking and user-friendly UI.
+                    <br/>
+                    <a style="color: gray; text-decoration: none" target="_blank" href="http://www.gatesnfences.com">Original
+                        design: www.gatesnfences.com</a>
+                    <br/>
+                    <a style="color: gray; text-decoration: none" target="_blank"
+                       href="https://gatesandfences.herokuapp.com">My design: www.gatesandfences.herokuapp.com</a>
+                </p>
+
+            </div>
+
+            <div class="project" data-wow-duration="1.5s">
+                <a href="https://www.strength-nutrition.com" target="_blank" style="text-decoration: none"><img
+                        class="projectPicture" src="images/SN.png" alt="Strength-Nutrition.com"/></a>
+
+                <div class="titleContainer">
+                    <a href="https://www.strength-nutrition.com" target="_blank" style="text-decoration: none">
+                        <h3 class="projectTitle">Strength-Nutrition.com</h3>
+                    </a>
+                    <i class="date">January 2018</i>
+                </div>
+
+                <p class="projectSlogan">A simple static website about nutrients</p>
+                <i class="mobileDate">January 2018</i>
+                <p class="projectDesc">Strength-Nutrition.com is a simple single-page static website that I have built
+                    to test
+                    my CSS & design skills. Why about nutrition? Because I am really into Nutrition Science.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--style="height:180%"-->
+<section class="oddSection" id="skills">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Skills</h2>
+            <p class="quote">“Learn as if you were to live forever.”</p>
+            <p class="quote by">- Mahatma Gandhi</p>
+            <hr class="hLine"/>
+        </div>
+
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h3 class="subHeader">Programming Languages</h3>
+            <div class="itemsContainer wow fadeInUp" data-wow-duration="1.5s">
+                <div class="column">
+                    <div class="item">
+                        <p class="item">JavaScript / TypeScript / NodeJS</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Python</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Java</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Swift</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">C</p>
+                        <p class="stars">★ ★ ★ ★ <span style="color: lightgray">★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Kotlin</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">PHP</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="item">
+                        <p class="item">Objective-C</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">C++</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">ARM Assembly</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">R</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Functional Programming (ML)</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Logic Programming (Prolog)</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">GO</p>
+                        <p class="stars">★ ★ <span style="color: lightgray">★ ★ ★</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h3 class="subHeader">Other Languages</h3>
+            <div class="itemsContainer wow fadeInUp" data-wow-duration="1.5s">
+                <div class="column">
+                    <div class="item">
+                        <p class="item">HTML</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">CSS</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">SQL</p>
+                        <p class="stars">★ ★ ★ ★ <span style="color: lightgray">★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">PDDL</p>
+                        <p class="stars">★ ★ ★ <span style="color: lightgray">★ ★</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="float: left" class="wow fadeInUp" data-wow-duration="1.5s">
+            <h3 class="subHeader">Technologies</h3>
+            <div class="itemsContainer wow fadeInUp" data-wow-duration="1.5s">
+                <div class="column">
+                    <div class="item">
+                        <p class="item">Xcode</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Android Studio</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">React & Redux</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">React Native</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Django</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">AWS</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Firebase</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Networking Protocols</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Encryption</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">NPM / Yarn</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Gradle</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+
+                </div>
+                <div class="column">
+                    <div class="item">
+                        <p class="item">CocoaPods</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Pip</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">REST APIs</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">FFmpeg</p>
+                        <p class="stars">★ ★ ★ ★ ★</p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Git</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Unix Shell</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">VS App Center</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Express.js</p>
+                        <p class="stars">★ ★ ★ ★<span style="color: lightgray"> ★</span></p>
+                    </div>
+
+                    <div class="item">
+                        <p class="item">Data Science</p>
+                        <p class="stars">★ ★ ★<span style="color: lightgray"> ★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Deep Learning & Image Processing</p>
+                        <p class="stars">★ ★ ★<span style="color: lightgray"> ★ ★</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="item">Keras</p>
+                        <p class="stars">★ ★ ★<span style="color: lightgray"> ★ ★</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--style="height:130%"-->
+<section id="awayFromCS">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Away from Computer Science</h2>
+            <p class="quote">“Don't count the days. Make the days count.”</p>
+            <p class="quote by">- Muhammad Ali</p>
+            <hr class="hLine"/>
+        </div>
+
+        <img src="images/plBlack.JPG" class="plPicture wow fadeInUp" data-wow-duration="1.5s"
+             alt="Omar Basem deadlift"/>
+        <p class="projectDesc wow fadeInUp" data-wow-duration="1.5s">Besides Computer Science, Powerlifting has stolen
+            my heart as well. For those of you who
+            may
+            not know, Powerlifting is a strength sport that consists of three attempts at maximal weight on three lifts:
+            Squat, Bench Press, and Deadlift.
+            I have competed in 2 Powerlifting competitions in September 2018 and April 2019 organized by
+            <a href="https://desertbarbell.co/index.html" style="color: gray" target="_blank">Desert Barbell</a> in
+            Dubai. The picture above is
+            225 KG Deadlift from my first competition.</p>
+    </div>
+</section>
+
+<!--style="height:125%"-->
+<section class="oddSection" id="photography">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header">Photography</h2>
+            <p class="quote">"Once you learn to care, you can record images with your mind or on film. There is no
+                difference between the two."</p>
+            <p class="quote by">- Anonymous</p>
+            <hr class="hLine"/>
+        </div>
+
+        <div class="photosContainer wow fadeInUp" data-wow-duration="1.5s">
+            <img src="images/sunset.JPG" class="photograph pic1" alt="Sunset at mountains"/>
+            <img src="images/bird.JPG" class="photograph pic2" alt="A bird on grass"/>
+            <img src="images/fire.JPG" class="photograph" alt="Eternal flame at baku martyrs memorial"/>
+            <img src="images/bee.jpg" class="photograph pic1" alt="Bee on a flower"/>
+            <img src="images/kids.JPG" class="photograph pic2" alt="Kids playing chess"/>
+            <img src="images/leaf.jpg" class="photograph" alt="Focused leaf"/>
+            <img src="images/tombs.JPG" class="photograph pic1" alt="Baku martyrs"/>
+            <img src="images/mosque.JPG" class="photograph pic2" alt="Mosque in Sharjah"/>
+            <img src="images/valley.JPG" class="photograph" alt="Hatta valley in Dubai"/>
+        </div>
+        <p class="projectDesc wow fadeInUp" data-wow-duration="1.5s">I also enjoy photography. The above are some snaps
+            that I took over the past few years.
+            These photos are captured using a Nikon D3200 DSLR.</p>
+    </div>
+
+
+    <div class="lightbox" id="lightbox">
+        <div class="close-container" id="close">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+            <label class="close">close</label>
+        </div>
+
+        <div class="arrowContainer arrowContainerRight" id="right">
+            <i class="arrow right"></i>
+        </div>
+
+        <div class="arrowContainer arrowContainerLeft" id="left">
+            <i class="arrow left"></i>
+        </div>
+
+
+        <div class="horizontalContainer" id="horizontalContainer">
+            <div class="photoContainer" id="1">
+                <img src="images/sunset.JPG" class="photograph2" alt="Sunset at mountains"/>
+            </div>
+            <div class="photoContainer" id="2">
+                <img src="images/bird.JPG" class="photograph2" alt="A bird on grass"/>
+            </div>
+            <div class="photoContainer" id="4">
+                <img src="images/fire.JPG" class="photograph2" alt="Eternal flame at baku martyrs memorial"/>
+            </div>
+            <div class="photoContainer" id="3">
+                <img src="images/bee.jpg" class="photograph2" alt="Bee on a flower"/>
+            </div>
+
+            <div class="photoContainer" id="5">
+                <img src="images/kids.JPG" class="photograph2" alt="Kids playing chess"/>
+            </div>
+            <div class="photoContainer" id="6">
+                <img src="images/leaf.jpg" class="photograph2" alt="Focused leaf"/>
+            </div>
+            <div class="photoContainer" id="7">
+                <img src="images/tombs.JPG" class="photograph2" alt="Baku martyrs"/>
+            </div>
+            <div class="photoContainer" id="8">
+                <img src="images/mosque.JPG" class="photograph2" alt="Mosque in Sharjah"/>
+            </div>
+            <div class="photoContainer" id="9">
+                <img src="images/valley.JPG" class="photograph2" alt="Hatta valley in Dubai"/>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="container footerContainer">
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <h2 class="header contact">Contact</h2>
+            <p class="quote" style="color: #7F7F90;">Have an idea or an inquiry? Feel free to get in touch!</p>
+            <hr class="hLine" style="background-color: #7F7F90;"/>
+        </div>
+
+        <div class="mobileSocialBox wow fadeInUp" data-wow-duration="1.5s">
+            <a i class="socialLink" href="https://www.linkedin.com/in/OmarBasem"
+               target="_blank">
+                <div class="socialContainer">
+                    <i class="social fa fa-linkedin"></i>
+                </div>
+                <p>https://www.linkedin.com/in/OmarBasem</p>
+            </a>
+            <a class="socialLink" href="https://github.com/OmarBasem" target="_blank">
+                <div class="socialContainer">
+                    <i class="social fa fa-github"></i>
+                </div>
+                <p>https://github.com/OmarBasem</p>
+            </a>
+            <div class="socialLink">
+                <div class="socialContainer">
+                    <i class="social fa fa-envelope"></i>
+                </div>
+                <p>founder@stiiick.com</p>
+            </div>
+            <div class="socialLink" style="margin-bottom: 5vh">
+                <div class="socialContainer">
+                    <i class="social fa fa-phone"></i>
+                </div>
+                <p>+971-55-849-0589</p>
+            </div>
+        </div>
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <div class="socialBox">
+                <a id="linkedinContainer" class="socialLink" href="https://www.linkedin.com/in/OmarBasem"
+                   target="_blank">
+                    <div id="linkedinIcon" class="socialContainer">
+                        <i class="social fa fa-linkedin"></i>
+                    </div>
+                    <p id="linkedinText">https://www.linkedin.com/in/OmarBasem</p>
+                </a>
+                <div id="emailContainer" class="socialLink">
+                    <div id="emailIcon" class="socialContainer">
+                        <i class="social fa fa-envelope"></i>
+                    </div>
+                    <p id="emailText">founder@stiiick.com</p>
+                </div>
+
+
+            </div>
+            <div class="socialBox" style="margin-left: 5vw; width: 20vw">
+                <a id="githubContainer" class="socialLink" href="https://github.com/OmarBasem" target="_blank">
+                    <div id="githubIcon" class="socialContainer">
+                        <i class="social fa fa-github"></i>
+                    </div>
+                    <p id="githubText">https://github.com/OmarBasem</p>
+                </a>
+                <div id="phoneContainer" class="socialLink" style="margin-bottom: 5vh">
+                    <div id="phoneIcon" class="socialContainer">
+                        <i class="social fa fa-phone"></i>
+                    </div>
+                    <p id="phoneText">+971-55-849-0589</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wow fadeInUp" data-wow-duration="1.5s">
+            <hr class="hLine" style="background-color: #7F7F90;"/>
+            <div class="vertical"></div>
+            <a href="PDFs/OmarBasemResume.pdf" target="_blank"><p class="download">Download Resume</p></a>
+            <div class="downArrow"></div>
+        </div>
+
+
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
+<script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
+</body>
+</html>

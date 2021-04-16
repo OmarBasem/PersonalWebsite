@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/networks.css">
+    <title>Networking</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Networking Packets Analysis Using Wireshark</h1>
+    <h2 class="subHeader">EIGRP</h2>
+    <img src="../images/EIGRP.png" alt="EIGRP network in GNS3"/>
+    <p class="caption">A Tree topology using EIGRP Networking Protocol created using GNS3</p>
+    <p class="txt">Since EIGRP is a distance-vector routing protocol, a router running EIGRP can
+        dynamically find the best path between any two "layer 3" nodes through the process of
+        sending and receiving routing advertisements to and from its neighboring EIGRP
+        routers. When communicating with its neighboring EIGRP routers, a router will send
+        5 different packets: Hello, Update, Query, Reply, Acknowledgement. This can be seen when capturing a newly
+        connected link to an EIGRP router.</p>
+    <img src="../images/fivePackets.png" alt="Hello, Update, Query, Reply and Acknowledgement packets of EIGRP captured using Wireshark"/>
+    <p class="caption">Hello, Update, Query, Reply & Acknowledgement of EIGRP</p>
+    <p class="txt">On a stable network, only Hello packets would be sent, which results in a very low usage of network
+        resources during normal operation. This can be noticed when capturing any link connected to an EIGRP router.</p>
+    <img src="../images/helloPackets.png" class="image3" alt="Hello packets from EIGRP router captured using Wireshark"/>
+    <p class="caption">Hello packets from EIGRP router</p>
+    <p class="txt">EIGRP should not form neighbor adjacency links on any interface where other
+        EIGRP routers do not exist for security reasons. In Figure 4, if router R3 was not an
+        EIGRP router then, no routing advertisements should be sent through the interface
+        between router R1 and router R3. Capturing the link between R1 and R3 shows
+        routing advertisements from both R1 (192.168.6.1) and R3 (192.168.6.2).</p>
+    <img src="../images/adsPackets.png" alt="EIGRP Routing advertisements captured using Wireshark"/>
+    <p class="caption">Routing advertisements on link R1-R3</p>
+    <p class="txt">In case R3 was not EIGRP router, then the interface from R1 to R3 can set to be passive, and no
+        routing advertisements would be captured on that particular link. Routing advertisements would still be captured
+        from other interfaces.</p>
+    <h2 class="subHeader" style="margin-top: 10vh">OSPF</h2>
+    <img src="../images/OSPF.png" alt="OSPF network in GNS3"/>
+    <p class="caption">A similar Tree Topology, but now using OSPF Networking Protocol</p>
+    <p class="txt">Since OSPF is a Link state routing protocol, it uses LSA floods as a mechanism of advertising. The figure below
+        shows some captured LSA floods that includes Hello, Update and Acknowledgement packets.</p>
+    <img src="../images/LSA.png" class="image3" alt="LSA floods of OSPF network captured using GNS3"/>
+    <p class="caption">LSA floods</p>
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+</div>
+
+</body>
+</html>

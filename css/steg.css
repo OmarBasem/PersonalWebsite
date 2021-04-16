@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+
+p, h1, h2, h3, i {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+a  {
+    text-decoration: none;
+}
+
+
+.header {
+    font-size: 2.5vw;
+    color: #20948D;
+    font-weight: 100;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.subHeader {
+    font-size: 2vw;
+    color: gray;
+    font-weight: 100;
+    margin-bottom: 6vh;
+    text-align: center;
+}
+
+figure {
+    display: inline-block;
+    margin-left: 3vw
+}
+
+img {
+    width: 20vw;
+    height: 20vw;
+    margin: auto;
+
+}
+
+div {
+    width: 50vw;
+    height: 25vw;
+    margin: 0 auto;
+}
+
+figcaption {
+    width: 20vw;
+    text-align: center;
+    margin-top: 2%;
+    font-family: sans-serif;
+}
+
+h4 {
+    overflow: hidden;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    color: #20948D;
+}
+
+h4:before,
+h4:after {
+    background-color: #20948D;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+
+h4:before {
+    right: 0.5em;
+}
+
+h4:after {
+    left: 0.5em;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 90vw;
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+    }
+
+    .header {
+        font-size: 8.75vw;
+    }
+    figure {
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        margin-left: 0;
+    }
+    figcaption {
+        font-size: 3.5vw;
+
+    }
+
+    img {
+
+        width: 36vw;
+        height: 36vw;
+        /*margin: 0*/
+        /*margin: auto;*/
+
+    }
+    figcaption {
+        width: 36vw;
+        height: 36vw;
+    }
+
+    .figContainer {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        justify-content: space-between;
+    }
+    .figContainer:nth-of-type(1) {
+        margin-bottom: 15vh;
+    }
+    .figContainer:nth-of-type(2) {
+        margin-bottom: 25vh;
+    }
+    h4 {
+        margin-top: 25vh;
+    }
+
+    .subheader {
+        font-size: 7vw;
+    }
+
+}

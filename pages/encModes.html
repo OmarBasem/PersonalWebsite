@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/networks.css">
+    <title>Encryption Modes</title>
+</head>
+<body>
+<div class="container" style="padding-bottom: 2vh">
+    <h1 class="header">Encryption Modes Analysis</h1>
+    <div>
+        <p style="margin-bottom: 5vh">The analysis was done on a text file of size 148 bytes (1184 bits).</p>
+        <h2 class="subHeader">CBC Mode</h2>
+        <p class="txt" style="margin-top: 2vh">The figure below shows the modified encrypted file (CBC Mode) in binary
+            after modifying a
+            single bit in the 55th and
+            90th bytes (modified bits in red):</p>
+        <img src="../images/encBinary.png" alt="Encrypted file in binary" class="encBinary"/>
+        <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in CBC mode. In total
+            132 bits
+            were changed among 34 bytes highlighted in dark red.</p>
+        <img src="../images/CBC.png" alt="CBC" class="encBinary"/>
+        <h2 class="subHeader">ECB Mode</h2>
+        <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in ECB mode. In total
+            131 bits
+            were changed among 32 bytes highlighted in dark red.</p>
+        <img src="../images/CBC.png" alt="ECB" class="encBinary"/>
+
+        <h2 class="subHeader">CFB Mode</h2>
+        <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in CFB mode. In total
+            132 bits were changed among 36 bytes highlighted in dark red.</p>
+        <img src="../images/CBC.png" alt="CFB" class="encBinary"/>
+
+        <h2 class="subHeader">OFB Mode</h2>
+        <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in ECB mode. In total
+            2 bits were changed among 2 bytes highlighted in dark red.</p>
+        <img src="../images/CBC.png" alt="OFB" class="encBinary"/>
+
+        <h2 class="subHeader">Analysis</h2>
+        <img src="../images/ENCTable.png" alt="Encryption modes analysis" class="encTable"/>
+        <p style="margin-top: 2vh">The table above summarizes the results. It is clear that OFB causes the least change
+            in the decrypted files. Precisely, only the changed bits before decryption are the changed bits after
+            decryption. This is expected because OFB works like a stream cipher where ciphertext bit error does not
+            propagate.</p>
+
+        <p style="margin-top: 2vh">The change in CFB, CBC and ECB are close, but CFB has caused the most change with 36
+            bytes. Both CFB and CBC
+            has caused changed across 4 blocks. This was expected since in both modes the nth cipher block depends on
+            the n-1th cipher block. The amount of change caused in ECB is similar to CFB and CBC, only one bit and few
+            bytes less. However, the difference is that change happened in 2 blocks only. This is due to C.n = Enc(P.n),
+            where C.n is the nth cipher block, and P.n is the nth plaintext block.
+            It can be noticed that every single byte of these 2 blocks was changed unlike CFB and CBC where the change
+            was across 4 different blocks.</p>
+
+        <p style="margin-top: 2vh">It can be noticed also that in CBC, the blocks where the bits were changed, caused
+            every byte in that block
+            to change, and only one byte in the following block to change.
+            In CFB, almost the opposite of that behaviour, the blocks where the bits were changed caused only 1 or 2
+            bytes to change in that block, and every single byte to change in the following block.
+            The above difference between CBC and CFB is because where the XORing is happening:</p>
+
+        <p style="margin-top: 2vh">CBC: C.n = Enc(P.n⊕C.n-1)
+            <br/>In CBC we XOR before encryption.
+            <br/>CFB: C.n = Enc(C.n-1) ⊕ P.n
+            <br/>In CFB we XOR after encryption</p>
+    </div>
+
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+</div>
+
+</body>
+</html>
