@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
-    <link rel="stylesheet" href="../css/networks.css">
+    <link rel="stylesheet" href="../css/pages.css">
     <title>Encryption Modes</title>
 </head>
 <body>
@@ -15,19 +15,26 @@
     <div>
         <p style="margin-bottom: 5vh">The analysis was done on a text file of size 148 bytes (1184 bits).</p>
         <h2 class="subHeader">CBC Mode</h2>
+        <p class="txt">The file is encrypted in CBC mode using the following command:</p>
+        <br/>
+        <p style="font-family: Menlo,serif">openssl enc -aes-192-cbc -e -in file.txt -out cbc.txt -K `key` -iv `iv`</p>
         <p class="txt" style="margin-top: 2vh">The figure below shows the modified encrypted file (CBC Mode) in binary
             after modifying a
             single bit in the 55th and
             90th bytes (modified bits in red):</p>
         <img src="../images/encBinary.png" alt="Encrypted file in binary" class="encBinary"/>
-        <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in CBC mode. In total
+        <p class="txt">The file is then decrypted using the following command</p>
+        <br />
+        <p style="font-family: Menlo,serif">openssl enc -aes-192-cbc -d -in cbcModified.txt -out cbcDecrypted.txt -K `key` -iv `iv`</p>
+        <p style="margin-top: 2vh">The figure below shows the decrypted file in binary in CBC mode. In total
             132 bits
             were changed among 34 bytes highlighted in dark red.</p>
         <img src="../images/CBC.png" alt="CBC" class="encBinary"/>
         <h2 class="subHeader">ECB Mode</h2>
         <p class="txt" style="margin-top: 2vh">The figure below shows the decrypted file in binary in ECB mode. In total
             131 bits
-            were changed among 32 bytes highlighted in dark red.</p>
+            were changed among 32 bytes highlighted in dark red. The encryption and decryption commands above are used for the
+        rest of the modes, substituting CBC with the corresponding mode.</p>
         <img src="../images/CBC.png" alt="ECB" class="encBinary"/>
 
         <h2 class="subHeader">CFB Mode</h2>

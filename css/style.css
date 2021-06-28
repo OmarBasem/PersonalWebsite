@@ -157,7 +157,7 @@ h1 {
 
     header {
         background-size: contain;
-        background: url('../images/meMobile.png');
+        background: url('../images/meMobile.jpg');
         background-repeat: no-repeat;
         background-position: center;
         justify-content: center;
@@ -204,6 +204,7 @@ h1 {
         font-size: 0.75vw;
         text-decoration: none;
         font-family: sans-serif;
+        cursor: pointer;
     }
     #more {
         display: none;
@@ -213,16 +214,18 @@ h1 {
 
 @media screen and (max-width: 1100px) {
     .navContainer {
+        opacity: 0;
         display: flex;
         flex-direction: row;
         overflow: scroll;
         white-space: nowrap;
         height: 5vh;
         background: #222222;
-        position: relative;
+        position: fixed;
          top: 0;
         z-index: 1;
         width: 100%;
+        justify-content: space-between;
 
     }
 
@@ -333,6 +336,7 @@ section {
     width: 65%;
     float: left;
     font-size: 1vw;
+    text-align: justify;
 }
 
 .tech {
@@ -425,20 +429,39 @@ section {
 .date {
     font-size: 1vw;
     color: #20948D;
+    margin-right: 0.2vw;
     /*margin-top: 1vh;*/
     /*position: absolute;*/
     /*right: 25%;*/
     /*line-height: 50%;*/
 }
 
-.seeMoreContainer {
-    /*height: 10px;*/
-}
+
 
 .seeMore {
-    color: #20948D;
+    color: #ffffff;
     text-align: center;
     cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    /*padding: 0.5vw*/
+    /*padding: 1vw;*/
+}
+
+.seeMoreContainer {
+    background: #20948D;
+    border-radius: 5vw;
+    margin-left: 40%;
+    width: 20%;
+    transition: 0.3s ease;
+
+}
+
+.seeMoreContainer:hover {
+     transform: scale(1.1);
+    box-shadow: 0 0.5vw 1vw 0 rgba(0, 0, 0, 0.2), 0 0.75vw 2.5vw 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -449,6 +472,13 @@ section {
 }
 
 @media screen and (max-width: 1100px) {
+    .seeMoreContainer {
+        width: 40%;
+        margin-left: 30%;
+    }
+    .seeMore {
+        font-size: 2vw;
+    }
     .header {
         font-size: 10.5vw;
     }
@@ -468,11 +498,17 @@ section {
     .projectDesc {
         font-size: 3.5vw;
         margin-top: 1vh;
+        text-align: left;
+    }
+
+    .projectDesc2 {
+        text-align: left;
     }
 
     .aboutText {
         font-size: 3.5vw;
-        width: 100%
+        width: 100%;
+        text-align: left;
     }
 
     .aboutTitle {
@@ -516,7 +552,7 @@ section {
     .projectPicture {
         width: 90vw;
         height: 90vw;
-        border-radius: 15vw;
+        border-radius: 10vw;
         margin-bottom: 3vh;
     }
 }
@@ -553,9 +589,10 @@ section {
 
 .stars {
     color: #20948D;
-    margin-bottom: 2vh;
+    /*margin-bottom: 2vh;*/
     white-space: nowrap;
     font-size: 1vw;
+    transition: 0.3s;
 }
 
 .item {
@@ -565,6 +602,17 @@ section {
     color: gray;
     font-size: 1vw;
     margin-bottom: 2vh;
+    transition: width 0.1s;
+    align-items: center;
+    height: 5vh;
+}
+
+.item:hover  {
+    background: #e6e6e6;
+}
+
+.item:hover .stars {
+    font-size: 1.1vw;
 }
 
 @media screen and (min-width: 1100px) {
@@ -909,9 +957,9 @@ footer {
 
     .footerContainer {
         position: fixed;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        top: 40%;
+        -ms-transform: translateY(-40%);
+        transform: translateY(-40%);
     }
 
     footer {

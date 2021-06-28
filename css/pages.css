@@ -20,6 +20,10 @@ p, h1, h2, h3, i {
     font-weight: normal;
 }
 
+h4 {
+    padding-bottom: 3vh;
+}
+
 p {
     font-family: sans-serif;
     font-size: 1vw;
@@ -42,6 +46,15 @@ p {
 .txt {
     font-size: 1vw;
     margin-top: 5vh;
+}
+
+.evalTxt {
+    margin-top: 2vh;
+    text-align: justify;
+}
+
+.evalSubHeader {
+    margin-top: 3vh;
 }
 
 img {
@@ -113,6 +126,52 @@ h4:after {
     left: 0.5em;
 }
 
+ol, ul {
+    padding-left: 2vw;
+    padding-top: 1vh;
+    font-family: sans-serif;
+}
+
+ul > li {
+    padding-bottom: 1vh;
+}
+
+table {
+    font-family: sans-serif;
+    padding-top: 2vh;
+    font-size: 1vw;
+    padding-bottom: 4vh;
+}
+
+td:nth-child(3) {
+    color: limegreen;
+    text-align: center;
+}
+
+.evalImg {
+    width: 25vw;
+    height: 15vw;
+}
+
+figcaption {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+/******* ENC MODES *****/
+
+.encBinary {
+    width: 20vw;
+    height: 20vw;
+    /*float: left;*/
+}
+
+.encTable {
+    height: 5vw;
+    width: 30vw;
+}
+
 @media screen and (max-width: 1000px) {
     .container {
         width: 90vw
@@ -148,6 +207,15 @@ h4:after {
         height: 40vw;
     }
 
+    .evalTxt {
+        text-align: left;
+    }
+
+    .evalImg {
+        width: 90vw;
+        height: 45vw;
+    }
+
     .encBinary {
         width: 90vw;
         height: 90vw;
@@ -166,21 +234,13 @@ h4:after {
         font-size: 4.375vw;
     }
 
+
+
     li {
         font-size: 3.5vw;
     }
+    table {
+        font-size: 4vw;
+    }
 }
 
-
-/******* ENC MODES *****/
-
-.encBinary {
-    width: 20vw;
-    height: 20vw;
-    /*float: left;*/
-}
-
-.encTable {
-    height: 5vw;
-    width: 30vw;
-}

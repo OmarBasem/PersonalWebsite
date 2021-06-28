@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/pages.css">
+    <title>Air Maps</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Air Maps</h1>
+    <h2 class="subHeader">Dijkstra's Algorithm</h2>
+    <img src="../images/dijkstra.png" class="evalImg"/>
+    <p class="txt">Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph. In this program
+    the nodes would be the airport. This nodes connected together will form a graph - a directed weighted
+    graph. In order for dijkstra's algorithm to find the shortest path between two vertices a and b, it picks the unvisited
+        vertex with the lowest distance, calculates the distance through it to each unvisited neighbor, and updates the
+        neighbor's distance if smaller, then mark as visited when done with neighbors. The programs relies on other algorithms
+    as well that are extensions of the Dijkstra's algorithm and Bellman-Ford algorithm from the JGraphT library.</p>
+    <p class="txt">There are 9 different criteria for the user to choose from:</p>
+    <ol>
+        <li>Cheapest route from one airport to another.</li>
+        <li>Fewest number of changeovers.</li>
+        <li>Cheapest Route excluding one or more airports.</li>
+        <li>Fewest number of changeovers, excluding one or more airports.</li>
+        <li>List of cheapest routes below a price excluding one or more airports.</li>
+        <li>List of least changeovers routes excluding one or more airports.</li>
+        <li>Cheapest meet up airport given two airports.</li>
+        <li>Least hop meet up airport given two airports.</li>
+        <li>Least time meet up airport between two airports given a starting time.</li>
+    </ol>
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+</div>
+
+</body>
+</html>

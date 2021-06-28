@@ -1,0 +1,16 @@
+  <div class="project wow fadeInUp" data-wow-duration="1.5s">
+            <a href="PDFs/ann.pdf" target="_blank"><img class="projectPicture" src="images/dataAnalysis.jpeg"
+                                                        alt="Data Analysis"/></a>
+
+            <div class="titleContainer">
+                <a href="PDFs/ann.pdf" target="_blank" style="text-decoration: none"><h3 class="projectTitle">Data Analysis of a Document Tracker</h3></a>
+                <i class="date">October 2020</i>
+            </div>
+            <p class="projectSlogan">A simple, data-intensive application in Python for analyzing documents from issuu.com</p>
+            <i class="mobileDate">October 2020</i>
+            <p class="projectDesc">I have developed a data-intensive application in Python used to analyze previously
+                tracked documents data on issuu.com. The application is used to analyze json files and produce meaningful
+                plots for different tasks, such as analyzing, for a given document, from which countries and continents
+                the document has been viewed. Also, given a particular document, the application can make recommendations
+                “similar” to that document.</p>
+        </div>

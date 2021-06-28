@@ -23,7 +23,7 @@
 
     const section1Height = document.getElementById('profile').offsetHeight
     const section2Height = document.getElementById('highlights').offsetHeight
-    const section3Height = document.getElementById('projects').offsetHeight
+    let section3Height = document.getElementById('projects').offsetHeight
     const section4Height = document.getElementById('skills').offsetHeight
     const section5Height = document.getElementById('awayFromCS').offsetHeight
     const section6Height = document.getElementById('photography').offsetHeight
@@ -32,15 +32,15 @@
     const s0 = screen.width > 1100 ? window.innerHeight : document.getElementsByTagName('header')[0].offsetHeight
     const s1 = s0 + section1Height
     const s2 = s1 + section2Height
-    const s3 = s2 + section3Height
-    const s4 = s3 + section4Height
-    const s5 = s4 + section5Height
-    const s6 = s5 + section6Height
+    let s3 = s2 + section3Height
+    let s4 = s3 + section4Height
+    let s5 = s4 + section5Height
+    let s6 = s5 + section6Height
 
     // document.getElementsByClassName('projectsSection')[0].style.maxHeight = '1000px'
     if (screen.width <= 1100) {
         document.getElementsByTagName('header')[0].style.height = `${1744 / window.innerHeight * 100}%`
-        document.getElementById('projectsMenu').innerText = 'Projects'
+        document.getElementById('projectsBtn').innerText = 'Projects'
     }
 
     if (screen.width > 1100)
@@ -148,8 +148,8 @@
     })
 
     const setActive = (node) => {
-        if (screen.width <= 1100 && node > 5)
-            node = 11
+        if (screen.width <= 1100 && node > 7)
+            node = 13
         const children = navContainer.childNodes
         for (let i = 0; i < children.length; i++) {
             if (i % 2 !== 0)
@@ -163,8 +163,8 @@
 
         const y = this.scrollY
 
-        if (screen.width > 1100)
-            navContainer.style.opacity = y / window.innerHeight;
+        // if (screen.width > 1100)
+        navContainer.style.opacity = y / window.innerHeight;
         if (y > (s6 - x))
             setActive(13)
         else if (y > (s5 - x))
@@ -179,19 +179,77 @@
             setActive(3)
         else if (y > (s0 - x))
             setActive(1)
-        if (screen.width <= 1100) {
-            if (y >= s0)
-                navContainer.style.position = 'fixed'
-            else
-                navContainer.style.position = 'relative'
-        }
+        // if (screen.width <= 1100) {
+        //     if (y >= s0)
+        //         navContainer.style.position = 'fixed'
+        //     else
+        //         navContainer.style.position = 'relative'
+        // }
     }
 
     document.getElementById('seeMore').onclick = e => {
         moreProjects.style.display = 'block'
         moreProjects.style.maxHeight = '10000px'
         seeMore.style.display = 'none'
+        setTimeout(() => {
+            section3Height = document.getElementById('projects').offsetHeight
+            s3 = s2 + section3Height
+            s4 = s3 + section4Height
+            s5 = s4 + section5Height
+            s6 = s5 + section6Height
+        }, 500)
         // document.getElementById('projects').style.maxHeight = '10000px'
+    }
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent);
+
+    if (isSafari) {
+        $("#profileBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#profile').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#highlightsBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#highlights').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#projectsBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#projects').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#skillsBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#skills').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#awayBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#awayFromCS').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#photographyBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#photography').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        $("#moreBtn").click(function () {
+            $('html , body').stop().animate({
+                scrollTop: $('#awayFromCS').offset().top
+            }, 1000, 'easeInOutExpo');
+        });
+        if (screen.width <= 1100) {
+            document.getElementById('seeMoreText').style.fontSize = '4vw'
+        }
+    } else {
+        document.getElementById('profileBtn').setAttribute('href', '#profile')
+        document.getElementById('highlightsBtn').setAttribute('href', '#highlights')
+        document.getElementById('projectsBtn').setAttribute('href', '#projects')
+        document.getElementById('skillsBtn').setAttribute('href', '#skills')
+        document.getElementById('awayBtn').setAttribute('href', '#awayFromCS')
+        document.getElementById('photographyBtn').setAttribute('href', '#photography')
+        document.getElementById('moreBtn').setAttribute('href', '#more')
     }
 
 

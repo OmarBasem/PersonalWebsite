@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="../css/pages.css">
+    <title>Stick Protocol Evaluation</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Stick Protocol Evaluation Results</h1>
+    <h2 class="subHeader">Experimental Setup</h2>
+    <p class="txt evalTxt">We aim to make our experiments as realistic as possible. The Stick protocol is already being
+        used
+        for a social network application called STiiiCK which will be released to production soon. We
+        will use STiiiCK for our experiments. To make sure our implementation will run smoothly on a
+        wide range of devices, we will be testing on 2 average devices: an iOS device - iPhone 6s, and an
+        Android device - Samsung Galaxy Note 10 Lite, with benchmarks of 531 and 533 respectively
+        (to put that into perspective, that’s only 1/3 of the top-ranking phone (Geekbench, 2021)). The
+        devices will be communicating with a remote server - about 4900km away - running Python 3.8
+        on Amazon Linux 2 and connected to a PostgreSQL database. The application running on the
+        mobile devices is in release mode. All tests were done under the same Internet conditions. Each
+        experiment was repeated 20 times on each device, then the average was taken.</p>
+
+
+    <h2 class="subHeader evalSubHeader">Sharing Content</h2>
+    <p class="txt evalTxt">In the first experiment, we aim to verify that sharing of content using the Stick protocol
+        causes
+        negligible performance overhead in comparison to not using E2EE. There are 3 cases to test:</p>
+
+    <ul>
+        <li><b>Case 0</b>: No end-to-end encryption being used</li>
+        <li><b>Case 1</b>: Stick protocol E2EE - the user needs to make a request to the server to get the
+            stickId, then encrypt & share the content. No extra sender keys needs to be shared.
+        </li>
+        <li><b>Case 2</b>: Stick protocol E2EE (less common) - the user needs to make a request to the
+            server to get the stickId of a new sticky session, in addition to a list of users (2 in this case)
+            to share the sender key with. The user will need to fetch PKBs, initialize new pairwise
+            sessions, initialize a new sticky session, encrypt the sender keys and upload them. Then,
+            the user can encrypt & share the content.
+        </li>
+    </ul>
+    <figure>
+        <img src="../images/eval1.png" class="evalImg"/>
+        <figcaption>Stick Protocol vs No E2EE - Sharing Content</figcaption>
+    </figure>
+    <p class="txt evalTxt">For each case, a user is trying to share 10 photos (≈25MB) and a 20 seconds video (≈40MB). To
+        keep the measurements as realistic as possible, the tests include standard media pre-processing
+        such as: compression & creating thumbnails. Figure 6.1 shows the results. Sharing 10 photos
+        with no E2EE took ≈3.5s. Introducing E2EE using the Stick protocol in case 1 took an extra
+        ≈0.3s. Stick protocol worst case took ≈4.3s (less than one extra second). Sharing a 20 seconds
+        video with no E2EE took ≈28.6s. Stick protocol case 1 took an extra ≈0.7s. Stick protocol
+        worst case took ≈29.7s. Only 1.1 extra seconds. We can see that the overhead is negligible.</p>
+    <h2 class="subHeader evalSubHeader">Receiving Content</h2>
+    <p class="txt evalTxt">In this experiment, we aim to verify that receiving content that is end-to-end encrypted
+        using
+        the Stick protocol causes negligible performance overhead in comparison to not using E2EE.
+        Again, there are 3 cases to test:</p>
+    <ul>
+        <li><b>Case 0</b>: No end-to-end encryption being used</li>
+        <li><b>Case 1</b>: Stick protocol E2EE - the user already has the corresponding sticky session
+            initialized. The user can download and decrypt the content.
+        </li>
+        <li><b>Case 2</b>: Stick protocol E2EE (less common) - the user does not have the corresponding
+            sticky session initialized. The user will need to fetch the corresponding sender key from
+            the server, decrypt it and initialize the sticky session. Then, the user can download and
+            decrypt the content..
+        </li>
+    </ul>
+    <figure>
+        <img src="../images/eval2.png" class="evalImg"/>
+        <figcaption>Stick Protocol vs No E2EE - Receiving Content</figcaption>
+    </figure>
+
+    <p class="txt evalTxt">In each case, the user is receiving a photo (≈1MB) and a video (≈5MB). Figure 6.2 summarizes
+the results. Case 0 took ≈1.4s and ≈3.1s for the photo and the video respectively. Introducing
+E2EE using the Stick protocol took an extra ≈0.1s only. Stick protocol worst case took ≈1.6s and
+≈3.3s for the photo and the video respectively (≈+0.2s). The overhead of receiving encrypted
+content is even more negligible</p>
+    <p class="txt evalTxt">The average overhead of sharing and receving content is 5.3% only.</p>
+    <a href="../index.html"><h4>Omar Basem</h4></a>
+</div>
+
+</body>
+</html>
