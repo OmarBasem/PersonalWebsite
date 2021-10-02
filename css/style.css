@@ -21,7 +21,7 @@ p, h1, h2, h3, i {
 /* header */
 
 header {
-    background: url('../images/me.jpeg');
+    background: url('../images/me2.jpeg');
     height: 100%;
     text-align: center;
     background-size: cover;
@@ -32,7 +32,7 @@ header {
 .heyContainer {
     color: #fff;
     margin-top: 40vh;
-    margin-right: 40vw;
+    margin-left: 50vw;
 
 }
 
@@ -157,7 +157,7 @@ h1 {
 
     header {
         background-size: contain;
-        background: url('../images/meMobile.jpg');
+        background: url('../images/meMobile2.jpeg');
         background-repeat: no-repeat;
         background-position: center;
         justify-content: center;
